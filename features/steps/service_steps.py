@@ -1,4 +1,3 @@
-# features/steps/service_steps.py
 import json
 import os
 import requests
@@ -18,14 +17,6 @@ def step_get(context, path):
 
 @when('hago POST a "{path}" con json')
 def step_post_json(context, path):
-    """
-    Permite pasar el body así en el feature:
-
-      When hago POST a "/sum" con json
-        """
-        {"a": 2, "b": 3}
-        """
-    """
     body = {}
     if context.text:
         body = json.loads(context.text)

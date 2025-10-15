@@ -7,12 +7,12 @@ Feature: Microservicio de ejemplo
     And el json contiene "status" con "ok"
 
   Scenario: Sumar dos números
-    When hago POST a "/sum" con json:
+    When hago POST a "/sum" con json
       """
       {"a": 2, "b": 3}
       """
     Then el status code es 200
-    And el json contiene "result" con 5
+    And el campo "result" es 5
 
   Scenario: Error por datos inválidos
     When hago POST a "/sum" con json:
