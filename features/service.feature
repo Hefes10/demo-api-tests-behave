@@ -19,4 +19,4 @@ Feature: Microservicio de ejemplo
       """
       {"a": "x", "b": 3}
       """
-    Then el status code es 400
+    Then el status code es 422
